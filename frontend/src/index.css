@@ -1,0 +1,182 @@
+:root {
+  --GrisOcuro: #333;
+  --GrisClaro: #f4f4f4;
+  --Blanco: #fff;
+  --FuenteUbuntu: "Ubuntu", sans-serif;
+  --GrisHoverNav: #464646;
+  --GrisMedio: #666666;
+  --GrisHoverSide: #f4f4f49f;
+  --GrisInput: #afafaf9f;
+  --Verde: #0d7a0d9f;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--FuenteUbuntu);
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.heading {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Estilos del header */
+.header {
+  background-color: var(--GrisOcuro);
+  color: var(--Blanco);
+  padding: 24px 120px 24px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__campo-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__texto {
+  margin: 0;
+}
+
+.header__nav {
+  background-color: var(--GrisOcuro);
+  padding: .9rem;
+  border-radius: .5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition-property: background-color;
+  transition-duration: .4s;
+}
+
+.header__nav:hover {
+  background-color: var(--GrisHoverNav);
+}
+
+.header__link {
+  text-decoration: none;
+  color: var(--Blanco);
+}
+
+
+/* Estilos del sidebar */
+.sidebar {
+  background-color: var(--GrisClaro);
+  width: 200px;
+  padding: 52px 20px;
+  position: fixed;
+  top: 118px;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar__campo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.sidebar__link {
+  text-decoration: none;
+  padding: 1.5rem .5rem 1rem .5rem;
+  border-radius: .6rem;
+  transition-property: background-color;
+  transition-duration: .4s;
+}
+
+.sidebar__link:hover {
+  background-color: var(--Blanco);
+}
+
+.sidebar__logo {
+  filter: invert(45%);
+}
+
+.sidebar__texto {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: var(--GrisMedio);
+  margin: 0;
+}
+
+/* Estilos del main */
+.main {
+  margin-top: 120px;
+  margin-left: 220px; /* Ancho del sidebar */
+  padding: 20px;
+  padding-bottom: 20rem;
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  height: calc(100vh - 50px); /* Altura del main es el 100% menos la altura del header */
+  position: fixed;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilos para hacer que el main sea deslizable */
+/*.main__scrollable {
+  height: 1000px; /* Altura de ejemplo para mostrar el desplazamiento */
+/*}
+
+/* Graficas */
+.graficas {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+/* Buscadores */
+
+.buscadores__flex {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.buscador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buscador__texto {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.buscador__select {
+  padding: .5rem 2rem;
+  border-radius: .5rem;
+  border: .13rem solid var(--GrisInput);
+  color: var(--Verde);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
