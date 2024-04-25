@@ -114,6 +114,11 @@ html {
   background-color: var(--Blanco);
 }
 
+.sidebar__link-activo {
+  background-color: var(--Blanco);
+}
+
+
 .sidebar__logo {
   filter: invert(45%);
 }
@@ -152,6 +157,7 @@ html {
   margin-bottom: 4rem;
 }
 
+
 /* Buscadores */
 
 .buscadores__flex {
@@ -179,4 +185,12 @@ html {
   color: var(--Verde);
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+.buscador__option {
+  letter-spacing: .5rem;
+  background-color: var(--GrisMedio);
+  color: var(--Blanco);
+  font-weight: bold;
+  font-size: 1.1rem;
 }

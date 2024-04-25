@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../config/db.js";
 
-const Regsitro = db.define('registros', {
+const Registro = db.define('registros', {
     id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -42,4 +42,4 @@ const Regsitro = db.define('registros', {
     },
 });
 
-export default Regsitro;
+export default Registro;

@@ -1,7 +1,10 @@
 import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, useLocation } from 'react-router-dom'
 
 const Layout = () => {
+
+  const location = useLocation();
+
   return (
     <>
     <header class="header">
@@ -18,18 +21,18 @@ const Layout = () => {
     <aside class="sidebar">
       <div className='sidebar__contenedor'>
         <nav className='sidebar__nav'>
-          <Link className='sidebar__link'>
-            <div className='sidebar__campo'>
-              <img className='sidebar__logo' src="../../img/home.png" alt="" width={35}/>
-              <p className='sidebar__texto'>Main</p>
-            </div>
-          </Link>
-          <Link className='sidebar__link'>
-            <div className='sidebar__campo'>
-              <img className='sidebar__logo' src="../../img/grafica.png" alt="" width={35}/>
-              <p className='sidebar__texto'>Graphics</p>
-            </div>
-          </Link>
+        <Link to='/' className={location.pathname === '/' ? 'sidebar__link sidebar__link-activo' : 'sidebar__link'}>
+        <div className='sidebar__campo'>
+          <img className='sidebar__logo' src="../../img/home.png" alt="" width={35}/>
+          <p className='sidebar__texto'>Main</p>
+        </div>
+      </Link>
+      <Link to='/graficas' className={location.pathname === '/graficas' ? 'sidebar__link sidebar__link-activo' : 'sidebar__link'}>
+        <div className='sidebar__campo'>
+          <img className='sidebar__logo' src="../../img/grafica.png" alt="" width={35}/>
+          <p className='sidebar__texto'>Graphics</p>
+        </div>
+      </Link>
         </nav>
       </div>
     </aside>
